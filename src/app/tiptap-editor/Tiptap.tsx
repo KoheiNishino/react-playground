@@ -135,6 +135,7 @@ export default function Tiptap() {
       }), Placeholder.configure({
         placeholder: 'Write something …',
       })]}
+      immediatelyRender={false}
       // TODO: デバッグ完了後に削除
       onUpdate={({ editor }) => {
         // eslint-disable-next-line no-console

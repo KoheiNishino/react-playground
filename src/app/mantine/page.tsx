@@ -8,11 +8,11 @@ import '@mantine/core/styles.css'
 import '@mantine/dates/styles.css'
 
 export default function App() {
-  const [value, setValue] = useState<[Date | null, Date | null]>([null, null])
+  const [value, setValue] = useState<[string | null, string | null]>([null, null])
 
   return (
     <MantineProvider>
-      <DatePicker excludeDate={date => date.getDay() !== 5} type="range" value={value} onChange={setValue} />
+      <DatePicker type="range" value={value} onChange={setValue} />
     </MantineProvider>
   )
 }

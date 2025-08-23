@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core'
+import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core'
 import { Top } from './Top'
 
 import '@mantine/core/styles.css'
@@ -7,7 +7,7 @@ import './css/globals.css'
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: ReactNode }>) {
+}: { children: ReactNode }) {
   return (
     <html lang="ja" {...mantineHtmlProps}>
       <head>
@@ -16,7 +16,7 @@ export default function RootLayout({
       <body>
         <main className="p-2">
           <Top />
-          <MantineProvider>{children}</MantineProvider>
+          {children}
         </main>
       </body>
     </html>
